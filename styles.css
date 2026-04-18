@@ -1,0 +1,164 @@
+/* =========================
+           PAGE LAYOUT
+        ========================= */
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    margin: 0;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+           MAP FRAME
+        ========================= */
+.frame {
+    width: 450px;
+    height: 350px;
+    border: 3px solid rgb(103, 100, 100);
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: rgb(28, 28, 27);
+}
+
+.content {
+    -webkit-user-drag: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+/* =========================
+           INPUT + BUTTON
+        ========================= */
+.guess-box {
+    width: 450px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.country-names {
+    font-size: 20px;
+    box-sizing: border-box;
+    flex: 3;
+    border-radius: 20px;
+    padding-left: 10px;
+    background-color: rgb(42, 41, 41);
+    border: none;
+    color: rgb(199, 218, 183);
+}
+
+.guess-btn {
+    flex: 1.5;
+    display: flex;
+}
+
+.guess-btn button {
+    flex: 1;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: rgb(42, 41, 41);
+    border: solid #c1dea7 2px;
+    color: #c1dea7;
+    transition: 0.5s;
+}
+
+.guess-btn button:hover {
+    background-color: #c1dea7;
+    color: white;
+    cursor: pointer;
+}
+
+.guess-btn button:active {
+    transform: scale(0.9);
+}
+
+/* =========================
+           DROPDOWN
+        ========================= */
+#dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+
+    background: #222;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    color: white;
+}
+
+#dropdown::-webkit-scrollbar {
+    width: 14px;
+    background-color: rgb(15, 14, 14);
+}
+
+#dropdown::-webkit-scrollbar-thumb {
+    background: rgb(193, 222, 167);
+    border-radius: 10px;
+}
+
+#dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgb(170, 200, 145);
+    cursor: grab;
+}
+
+.drop-element {
+    font-size: 23px;
+    padding: 5px 8px;
+    border-bottom: solid black 2px;
+    color: rgb(199, 218, 183);
+}
+
+.drop-element:hover {
+    background-color: rgb(22, 22, 22);
+    cursor: pointer;
+}
+
+.options {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.options button {
+    height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.disabled {
+    border: solid #c1dea7 1px;
+    background-color: rgb(42, 41, 41);
+    color: #c1dea7;
+}
+
+.enabled {
+    background-color: #9ab087;
+    border: none;
+    color: white;
+}
+
+.options button:hover {
+    cursor: pointer;
+}
+
+.world-map {
+    fill: #353532;
+    stroke: white;
+}
