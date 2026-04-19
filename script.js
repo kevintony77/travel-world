@@ -58,27 +58,27 @@ const guessButton = document.querySelector('.guess-btn-js');
 
 const el = document.querySelector('.content');
 const frame = document.querySelector('.frame');
-const toggleBoundary = document.querySelector('.toggle-boundary')
-toggleBoundary.addEventListener('click', ()=>{
-    if(toggleBoundary.classList.contains('enabled')){
-        toggleBoundary.classList.remove('enabled');
-        toggleBoundary.classList.add('disabled')
-        document.querySelector('.world-map').style.fill = '#00000000'
-    } else{
-        toggleBoundary.classList.remove('disabled');
-        toggleBoundary.classList.add('enabled')
-        document.querySelector('.world-map').style.fill = '#353532'
-    }
-})
 const toggleMap = document.querySelector('.toggle-map')
 toggleMap.addEventListener('click', ()=>{
     if(toggleMap.classList.contains('enabled')){
         toggleMap.classList.remove('enabled');
         toggleMap.classList.add('disabled')
-        document.querySelector('.world-map').style.stroke = 'none'
+        document.querySelector('.world-map').style.fill = '#00000000'
     } else{
         toggleMap.classList.remove('disabled');
         toggleMap.classList.add('enabled')
+        document.querySelector('.world-map').style.fill = '#353532'
+    }
+})
+const toggleBoundary = document.querySelector('.toggle-boundary')
+toggleBoundary.addEventListener('click', ()=>{
+    if(toggleBoundary.classList.contains('enabled')){
+        toggleBoundary.classList.remove('enabled');
+        toggleBoundary.classList.add('disabled')
+        document.querySelector('.world-map').style.stroke = 'none'
+    } else{
+        toggleBoundary.classList.remove('disabled');
+        toggleBoundary.classList.add('enabled')
         console.log('hi')
         document.querySelector('.world-map').style.stroke = 'white'
     }
