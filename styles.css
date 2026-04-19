@@ -55,7 +55,7 @@ body {
 }
 
 .country-names {
-    font-size: 20px;
+    font-size: 100%;
     box-sizing: border-box;
     flex: 3;
     border-radius: 20px;
@@ -122,7 +122,8 @@ body {
 }
 
 .drop-element {
-    font-size: 23px;
+    font-size: 20px;
+    box-sizing: border-box;
     padding: 5px 8px;
     border-bottom: solid black 2px;
     color: rgb(199, 218, 183);
