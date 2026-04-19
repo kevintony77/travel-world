@@ -77,7 +77,8 @@ body {
     background-color: rgb(42, 41, 41);
     border: solid #c1dea7 2px;
     color: #c1dea7;
-    transition: 0.5s;
+    transition: background-color 0.5s, transform 0.2s;
+    user-select: none;
 }
 
 .guess-btn button:hover {
@@ -87,7 +88,8 @@ body {
 }
 
 .guess-btn button:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
+    background-color: #4c5743;
 }
 
 /* =========================
@@ -146,6 +148,7 @@ body {
     border-radius: 10px;
     padding-left: 9px;
     padding-right: 9px;
+    user-select: none;
 }
 
 .disabled {
